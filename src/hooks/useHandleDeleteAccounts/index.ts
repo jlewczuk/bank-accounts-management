@@ -1,0 +1,1 @@
+export { useHandleDeleteAccounts } from "./useHandleDeleteAccounts";

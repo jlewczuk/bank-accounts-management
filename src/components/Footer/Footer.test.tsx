@@ -11,7 +11,7 @@ describe("Footer", () => {
   it("displays the correct year and site name", () => {
     const mockYear = 2024;
 
-    (getCurrentYear as jest.Mock).mockReturnValueOnce(mockYear); // replace mockYear as needed
+    (getCurrentYear as jest.Mock).mockReturnValueOnce(mockYear);
 
     const { getByText } = render(<Footer />);
 

@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { ComponentType, ReactElement } from "react";
 import { Table } from "./Table";
 import {
@@ -51,5 +51,24 @@ describe("Table", () => {
       expect(getByText(row.currency)).toBeInTheDocument();
       expect(getByText(row.balance)).toBeInTheDocument();
     });
+  });
+
+  it("filters rows based on search term", () => {
+    const { getByText, queryByText, getByTestId } = renderWithProviders(
+      <Table headers={headers} rows={rows} columnWidths={columnWidths} />,
+    );
+
+    const searchTerm = "USD";
+    const searchInput = getByTestId("search-input");
+    fireEvent.change(searchInput, { target: { value: searchTerm } });
+
+    expect(getByText("USD")).toBeInTheDocument();
+    expect(queryByText("EUR")).not.toBeInTheDocument();
+
+    const nonMatchingSearchTerm = "Nonexistent";
+    fireEvent.change(searchInput, { target: { value: nonMatchingSearchTerm } });
+
+    expect(queryByText("USD")).not.toBeInTheDocument();
+    expect(queryByText("EUR")).not.toBeInTheDocument();
   });
 });

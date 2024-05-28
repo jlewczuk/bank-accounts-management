@@ -1,4 +1,4 @@
-import { OptionType } from "../../components/Select/Select";
+import { OptionType } from "../../components";
 import { IAccount } from "../../interfaces";
 
 export const generateSelectOptions = (

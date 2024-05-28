@@ -18,11 +18,15 @@ interface StyledRowProps<T extends IAccount> {
 const StyledRow = styled.tr<StyledRowProps<any>>`
   width: 100%;
   background-color: ${(props): string =>
-    props.isSelected ? "#d3f4ff" : "white"};
+    props.isSelected
+      ? "var(--table-row-color-selected)"
+      : "var(--color-white)"};
 
   &:nth-child(even) {
     background-color: ${(props): string =>
-      props.isSelected ? "#d3f4ff" : "#f2f2f2"};
+      props.isSelected
+        ? "var(--table-row-color-selected)"
+        : "var(--table-row-color-even-child)"};
   }
 `;
 

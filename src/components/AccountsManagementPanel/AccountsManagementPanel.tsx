@@ -10,14 +10,14 @@ const ManagementPanel = styled.div`
 `;
 
 const NoAccountsMessage = styled.p`
-  color: #555;
-  font-size: 16px;
+  color: var(--text-color);
+  font-size: var(--font-size-md);
   margin-top: 20px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: var(--border);
   border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color-secondary);
+  box-shadow: var(--box-shadow-primary);
 `;
 
 export const AccountsManagementPanel = () => {

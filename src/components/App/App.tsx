@@ -2,18 +2,19 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
 import { RoutesEnum } from "../../enums";
 import { AccountsManagementPanel, Footer, HomePage, TopBar } from "../index";
+import "../../variables.css";
 
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-        color: #333;
+        font-family: var(--font-family), sans-serif;
+        color: var(--text-color);
     }
 
     body {
-        background-color: #F5F7FA;
+        background-color: var(--background-color);
     }
 `;
 

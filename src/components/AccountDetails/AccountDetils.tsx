@@ -3,11 +3,11 @@ import { AccountDetailItem } from "./AccountDetailItem";
 import { IAccount } from "../../interfaces";
 
 const StyledAccountDetails = styled.div`
-  border: 1px solid #ddd;
+  border: var(--border);
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: var(--background-color-secondary);
 `;
 
 type AccountDetailsProps = { account: IAccount };

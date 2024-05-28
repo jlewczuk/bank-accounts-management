@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, ReactNode, useState } from "react";
 import { Toast } from "../../components/Toast";
 import { ToastStatusEnum, ToastTypeEnum } from "../../enums";
 
@@ -16,7 +16,7 @@ interface ToastContextType {
 export const ToastContext = createContext<ToastContextType | undefined>(
   undefined,
 );
-export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
+export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toast, setToast] = useState<ToastProp>({
     header: "",
     text: "",

@@ -12,7 +12,7 @@ describe("Button component", () => {
   it("default button has cursor pointer", () => {
     const { getByText } = render(<Button text="Default Button" />);
     const defaultButton = getByText("Default Button");
-    expect(defaultButton).toHaveStyle("cursor: pointer;");
+    expect(defaultButton).toHaveStyle("cursor: var(--cursor-pointer)");
   });
 
   it("warning button has cursor pointer", () => {
@@ -20,7 +20,7 @@ describe("Button component", () => {
       <Button text="Warning Button" $variant={ButtonVariantEnum.Warning} />,
     );
     const warningButton = getByText("Warning Button");
-    expect(warningButton).toHaveStyle("cursor: pointer;");
+    expect(warningButton).toHaveStyle("cursor: var(--cursor-pointer)");
   });
 
   it("disabled button has cursor not-allowed", () => {
@@ -28,7 +28,7 @@ describe("Button component", () => {
       <Button text="Disabled Button" disabled={true} />,
     );
     const disabledButton = getByText("Disabled Button");
-    expect(disabledButton).toHaveStyle("cursor: not-allowed;");
+    expect(disabledButton).toHaveStyle("cursor: var(--cursor-not-allowed)");
   });
 
   it("triggers onClick event", () => {

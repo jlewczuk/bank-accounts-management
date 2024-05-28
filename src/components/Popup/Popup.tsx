@@ -15,8 +15,8 @@ const PopupBackground = styled.div`
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 9999;
+  background-color: var(--popup-background-color);
+  z-index: var(--top-z-index);
 `;
 
 const PopupContent = styled.div`

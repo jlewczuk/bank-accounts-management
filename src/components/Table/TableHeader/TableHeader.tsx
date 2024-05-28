@@ -6,7 +6,7 @@ import { Checkbox } from "../../Checkbox";
 
 const StyledHeader = styled.th<StyledHeaderProps>`
   width: ${(props) => props.width};
-  background-color: #3498db;
+  background-color: var(--app-color-primary);
   color: white;
   padding: 10px;
   text-align: center;

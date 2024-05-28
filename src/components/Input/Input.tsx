@@ -11,17 +11,17 @@ const InputWrapper = styled.div`
 
 const Label = styled.label`
   margin-bottom: 5px;
-  color: #333;
+  color: var(--text-color);
   font-size: 14px;
 `;
 
 const InputField = styled.input`
   height: 40px;
-  border: 1px solid #999;
+  border: var(--input-border);
   border-radius: 4px;
   padding: 0 10px;
-  font-size: 16px;
-  color: #333;
+  font-size: var(--font-size-md);
+  color: var(--text-color);
 
   &:focus {
     outline: none;

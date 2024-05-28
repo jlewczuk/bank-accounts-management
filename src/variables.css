@@ -1,0 +1,42 @@
+:root {
+  --app-color-primary: #3498db;
+  --app-color-primary-hover: #2980b9;
+
+  --background-color: #f5f7fa;
+  --background-color-disabled: #bdc3c7;
+  --background-color-secondary: #f9f9f9;
+
+  --border: 1px solid #dedede;
+
+  --box-shadow-primary: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-secondary: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  --color-success: #4caf50;
+  --color-warning: #ff5722;
+  --color-warning-hover: #df3a01;
+  --color-white: #fff;
+
+  --cursor-not-allowed: not-allowed;
+  --cursor-pointer: pointer;
+
+  --font-family: "Roboto";
+  --font-size-md: 16px;
+  --font-size-sm: 14px;
+  --font-weight-bold: 700;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+
+  --footer-background-color: #282c34;
+
+  --input-border: 1px solid #999;
+
+  --popup-background-color: rgba(0, 0, 0, 0.4);
+
+  --table-row-color-even-child: #f2f2f2;
+  --table-row-color-selected: #d3f4ff;
+
+  --text-color: #333;
+  --text-color-secondary: #fff;
+
+  --top-z-index: 9999;
+}

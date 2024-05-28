@@ -7,8 +7,8 @@ const Wrapper = styled.div`
 `;
 
 const Label = styled.label`
-  color: #333;
-  font-size: 14px;
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
   margin-bottom: 5px;
 `;
 
@@ -17,12 +17,12 @@ const Dropdown = styled.div.attrs(() => ({
 }))`
   position: absolute;
   width: 100%;
-  border: 1px solid #999;
+  border: var(--input-border);
   z-index: 1;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   max-height: 160px;
   overflow-y: auto;
-  background-color: white;
+  background-color: #fff;
 `;
 
 const Option = styled.div.attrs(() => ({

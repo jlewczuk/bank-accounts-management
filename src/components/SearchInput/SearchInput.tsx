@@ -4,20 +4,19 @@ import styled from "styled-components";
 const StyledSearchInput = styled.input`
   margin: 10px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 40px);
-  max-width: 400px;
+  border: var(--border);
+  box-shadow: var(--box-shadow-primary);
+  width: 400px;
   outline: none;
   transition:
     box-shadow 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
 
   &:focus {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-color: #3498db;
+    box-shadow: var(--box-shadow-secondary);
+    border-color: var(--app-color-primary);
   }
 `;
 

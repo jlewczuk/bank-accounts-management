@@ -7,10 +7,10 @@ import { IAccount } from "../../interfaces";
 import { SearchInput } from "../SearchInput";
 
 const StyledTableWrapper = styled.div`
-  border: 1px solid #ddd;
+  border: var(--border);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-primary);
 `;
 
 const StyledTableContainer = styled.div`

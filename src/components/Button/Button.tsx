@@ -8,18 +8,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const handleVariant = (variant?: ButtonVariantEnum, disabled?: boolean) => {
-  if (disabled) return "#bdc3c7";
-  if (variant === ButtonVariantEnum.Warning) return "#FF5722";
-  return "#3498db";
+  if (disabled) return "var(--background-color-disabled)";
+  if (variant === ButtonVariantEnum.Warning) return "var(--color-warning)";
+  return "var(--app-color-primary)";
 };
 
 const handleHoverVariant = (
   variant?: ButtonVariantEnum,
   disabled?: boolean,
 ) => {
-  if (disabled) return "#bdc3c7";
-  if (variant === ButtonVariantEnum.Warning) return "#DF3A01";
-  return "#2980b9";
+  if (disabled) return "var(--background-color-disabled)";
+  if (variant === ButtonVariantEnum.Warning)
+    return "var(--color-warning-hover)";
+  return "var(--app-color-primary-hover)";
 };
 
 const StyledButton = styled.button<ButtonProps>`
@@ -27,13 +28,14 @@ const StyledButton = styled.button<ButtonProps>`
   padding: 15px 32px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: var(--font-size-md);
   margin: 10px;
   border-radius: 8px;
-  font-weight: bold;
-  color: white;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
   transition: all 0.2s ease-in-out;
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  cursor: ${(props) =>
+    props.disabled ? "var(--cursor-not-allowed)" : "var(--cursor-pointer)"};
 
   background-color: ${(props) => handleVariant(props.$variant, props.disabled)};
 

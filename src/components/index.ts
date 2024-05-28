@@ -4,3 +4,4 @@ export { Footer } from "./Footer";
 export { HomePage } from "./HomePage";
 export { Popup } from "./Popup";
 export { TopBar } from "./TopBar";
+export type { OptionType } from "./Select";

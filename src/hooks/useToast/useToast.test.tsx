@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import { act } from "react";
 import { useToast } from "./useToast";
-import { ToastProvider } from "../../contexts/ToastContext";
+import { ToastProvider } from "../../contexts";
 import { ToastTypeEnum } from "../../enums";
 
 describe("useToast", () => {

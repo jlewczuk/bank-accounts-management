@@ -13,19 +13,24 @@ const ToastStyles = styled.div<ToastStylesProps>`
   width: auto;
   max-width: 300px;
   padding: 20px;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-left: 5px solid
-    ${(props) => (props.type === ToastTypeEnum.ERROR ? "#f44336" : "#4caf50")};
-  z-index: 9999;
+    ${(props) =>
+      props.type === ToastTypeEnum.ERROR
+        ? "var(--color-warning)"
+        : "var(--color-success)"};
+  z-index: var(--top-z-index);
   transition: all 0.5s ease;
-  color: #333;
+  color: var(--text-color);
 
   h5 {
     margin: 0 0 10px 0;
     color: ${(props) =>
-      props.type === ToastTypeEnum.ERROR ? "#f44336" : "#4caf50"};
+      props.type === ToastTypeEnum.ERROR
+        ? "var(--color-warning)"
+        : "var(--color-success)"};
   }
 
   p {

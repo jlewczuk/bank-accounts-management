@@ -8,7 +8,7 @@ describe("Divider", () => {
     const divider = container.firstChild;
 
     expect(divider).toHaveStyleRule("height", "50px");
-    expect(divider).toHaveStyleRule("border-left", "1px solid #dedede");
+    expect(divider).toHaveStyleRule("border-left", "var(--border)");
     expect(divider).toHaveStyleRule("margin", "auto 15px");
   });
 
@@ -17,7 +17,7 @@ describe("Divider", () => {
     const divider = container.firstChild;
 
     expect(divider).toHaveStyleRule("width", "100%");
-    expect(divider).toHaveStyleRule("border-top", "1px solid #dedede");
+    expect(divider).toHaveStyleRule("border-top", "var(--border)");
     expect(divider).toHaveStyleRule("margin", "15px auto");
   });
 });

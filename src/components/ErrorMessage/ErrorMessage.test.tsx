@@ -8,7 +8,7 @@ describe("ErrorMessage component", () => {
 
     const errorElement = screen.getByText("Test error message");
     expect(errorElement).toBeInTheDocument();
-    expect(errorElement).toHaveStyle("color: red");
+    expect(errorElement).toHaveStyle("color: var(--color-warning)");
   });
 
   test("Not rendering when no text is given", () => {

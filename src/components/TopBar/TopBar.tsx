@@ -22,11 +22,11 @@ const TopBarContainer = styled.header`
   align-items: center;
   padding: 20px;
   height: 80px;
-  background-color: #f5f7fa;
+  background-color: var(--background-color);
   z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-primary);
   box-sizing: border-box;
-  border-bottom: 1px solid #dedede;
+  border-bottom: var(--border);
 `;
 
 const Logo = styled.img`
@@ -48,7 +48,7 @@ const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
   background: none;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
 `;
 
 const ButtonGroup = styled.div`

@@ -13,8 +13,8 @@ const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   height: 0;
 
   &:checked + label {
-    background-color: #4caf50;
-    border-color: #4caf50;
+    background-color: var(--color-success);
+    border-color: var(--color-success);
   }
 
   &:checked + label:after {
@@ -29,7 +29,7 @@ const CheckboxLabel = styled.label`
   height: 20px;
   border: 2px solid #ccc;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: var(--color-white);
 
   &:after {
     position: absolute;

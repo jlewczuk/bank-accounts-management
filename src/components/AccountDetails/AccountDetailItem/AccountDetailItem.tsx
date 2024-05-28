@@ -4,25 +4,19 @@ import { OptionType } from "../../Select/Select";
 const AccountDetail = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #f5f5f5;
   padding: 5px 10px;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 10px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
 `;
 
 const Label = styled.span`
-  color: #333;
-  font-weight: 600;
+  color: var(--text-color);
+  font-weight: var(--font-weight-medium);
 `;
 
 const Value = styled.span`
   text-align: right;
-  font-weight: normal;
+  font-weight: var(--font-weight-normal);
 `;
 
 export const AccountDetailItem = ({ label, value }: OptionType) => (
